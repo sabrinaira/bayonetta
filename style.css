@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  background-color: black;
+}
+
+.nav-bar {
+  background-color: purple;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: white;
+}
+
+.bayo-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bayo-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+  margin-inline: 1rem;
+  height: auto;
+  width: 25rem;
+  height: 40rem;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  transition: 0.3s;
+}
+
+.bayo-nav img {
+  width: 100%;
+  height: auto;
+  margin-inline: 2rem;
+  transition: 0.3s;
+}
+
+.bayo-nav img[alt='bayonetta 3'] {
+  padding-top: 2rem;
+}
+
+.bayo-nav img[alt='bayonetta 2'] {
+  padding-top: 8rem;
+}
+
+.bayo-nav img[alt='bayonetta 1'] {
+  padding-top: 6rem;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+}
+
+/* hover */
+.bayo-nav a:hover {
+  background: none;
+  transition: 0.3s;
+}
+
+.bayo-nav img:hover {
+  width: 30rem;
+  height: auto;
+  transition: 0.3s;
+}
