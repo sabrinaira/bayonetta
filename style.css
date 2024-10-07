@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,22 +11,35 @@
 body {
   height: 100%;
   background-color: black;
+  font-family: raleway;
 }
 
-.nav-bar {
-  background-color: purple;
+/* ------------------------------------------ */
+
+/* Initially hide the logos using opacity and visibility */
+.logo {
+  position: absolute;
+  top: 1rem; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.nav-bar a {
-  text-decoration: none;
-  color: white;
+/* When hovered (via JS), fade in the logos */
+.show-logo {
+  opacity: 1;
+  visibility: visible;
 }
 
+/* ------------------------------------------ */
 .bayo-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 17rem;
 }
 
 .bayo-nav a {
@@ -38,10 +56,23 @@ body {
   transition: 0.3s;
 }
 
+/* hover */
+.bayo-nav a:hover {
+  background: none;
+  transition: 0.3s;
+}
+
 .bayo-nav img {
   width: 100%;
   height: auto;
-  margin-inline: 2rem;
+  margin-inline: 1rem;
+  transition: 0.3s;
+}
+
+/* hover */
+.bayo-nav img:hover {
+  width: 30rem;
+  height: auto;
   transition: 0.3s;
 }
 
@@ -57,19 +88,39 @@ body {
   padding-top: 6rem;
 }
 
+/* ------------------------------------------ */
+.about {
+  margin-top: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.about a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+/* ------------------------------------------ */
+
+footer {
+  margin-bottom: 2rem;
+}
+
 footer p {
   text-align: center;
   color: white;
 }
 
-/* hover */
-.bayo-nav a:hover {
-  background: none;
-  transition: 0.3s;
-}
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .logo {
+    display: none;
+  }
 
-.bayo-nav img:hover {
-  width: 30rem;
-  height: auto;
-  transition: 0.3s;
+  .bayo-nav {
+    flex-direction: column;
+  }
+
+  .bayo-nav a {
+    margin: 1rem;
+  }
 }
