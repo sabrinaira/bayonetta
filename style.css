@@ -19,7 +19,7 @@ body {
 /* Initially hide the logos using opacity and visibility */
 .logo {
   position: absolute;
-  top: 1rem; /* Adjust as needed */
+  top: 0rem; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -39,16 +39,17 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  list-style: none;
   margin-top: 17rem;
+  transition: 0.3s;
 }
 
 .bayo-nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: gray;
+  background-color: rgb(49, 23, 78);
   margin-inline: 1rem;
-  height: auto;
   width: 25rem;
   height: 40rem;
   padding: 1.5rem;
@@ -78,31 +79,62 @@ body {
 
 .bayo-nav img[alt='bayonetta 3'] {
   padding-top: 2rem;
+  transition: 0.3s;
 }
 
 .bayo-nav img[alt='bayonetta 2'] {
   padding-top: 8rem;
+  transition: 0.3s;
 }
 
 .bayo-nav img[alt='bayonetta 1'] {
-  padding-top: 6rem;
+  padding-top: 5rem;
+  transition: 0.3s;
 }
 
 /* ------------------------------------------ */
+h4 {
+  font-family: Cinzel;
+  margin-bottom: 1rem;
+}
+
 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
   color: white;
   text-align: center;
 }
 
-.about a {
+.about p {
+  display: block;
+  text-align: center;
+  padding-inline: 10rem;
+  font-size: small;
+}
+
+.sources {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.sources a {
   text-decoration: none;
-  color: blueviolet;
+  color: #e721e3;
+  text-align: center;
+  font-size: small;
 }
 
 /* ------------------------------------------ */
 
 footer {
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -111,16 +143,66 @@ footer p {
   color: white;
 }
 
+footer a {
+  text-decoration: none;
+  color: rgb(93, 134, 224);
+}
+
+/* ------------------------------------------ */
+
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .logo {
     display: none;
   }
 
   .bayo-nav {
+    margin: 0;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .bayo-nav img[alt='bayonetta 3'] {
+    padding-top: 1rem;
+  }
+
+  .bayo-nav img[alt='bayonetta 2'] {
+    padding-top: 2rem;
+  }
+
+  .bayo-nav img[alt='bayonetta 1'] {
+    padding-top: 2rem;
   }
 
   .bayo-nav a {
-    margin: 1rem;
+    margin: 0.5rem;
+    width: 7rem;
+    height: 10rem;
+  }
+
+  .bayo-nav img:hover {
+    width: 9rem;
+  }
+
+  .about p {
+    padding-inline: 5rem;
+  }
+}
+
+@media (hover: none) {
+  /* Disable hover styles for .bayo-nav a elements */
+  .bayo-nav a:hover {
+    background-color: rgb(49, 23, 78); /* Keep the original non-hover color */
+    transition: none; /* Remove transitions */
+    cursor: pointer; /* Keep the cursor as pointer for better UX */
+  }
+
+  /* Disable hover effects for images */
+  .bayo-nav img:hover {
+    width: 100%; /* Reset width to default */
+    height: auto;
+    transition: none; /* Remove transitions */
+    cursor: pointer;
   }
 }
